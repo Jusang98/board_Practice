@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <filter>
+        <filter-name>adminLoginCheckFilter</filter-name>
+        <filter-class>com.nhnacademy.servlet.Admin.AdminLoginCheckFilter</filter-class>
+        <init-param>
+            <param-name>exclude-urls</param-name>
+            <param-value>
+
+            </param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>adminLoginCheckFilter</filter-name>
+        <url-pattern>/index.html</url-pattern>
+    </filter-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
